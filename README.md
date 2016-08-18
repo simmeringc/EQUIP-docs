@@ -1,5 +1,6 @@
-## DataObs Docs: http://docs.equip.ninja
+## EQUIP Observation Web Application
 
-Documentation for DataObs (EQUIP)
+* Visit the application: http://www.equip.ninja
+* See the documentation: http://docs.equip.ninja
 
-Generated with meteor-jsdoc
+Visit <a href="https://www.npmjs.com/package/meteor-jsdoc">meteor-jsdoc</a> for more information on EQUIP documentation.
