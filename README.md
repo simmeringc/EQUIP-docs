@@ -1,4 +1,4 @@
-## EQUIP Observation Web Application
+## EQUIP Docs - Generated with <a href="https://www.npmjs.com/package/meteor-jsdoc">meteor-jsdoc</a>
 
 * Visit the application: http://www.equip.ninja
 * See the documentation: http://docs.equip.ninja
