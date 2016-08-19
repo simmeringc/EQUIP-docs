@@ -47,9 +47,9 @@ The production version of EQUIP uses:
 
 EQUIP is still in development and documentation of the full API is unfinished.
 
-EQUIP project docs are generated with <a href="https://www.npmjs.com/package/meteor-jsdoc">meteor-jsdoc</a> and are hosted along side EQUIP with <a href="https://www.meteor.com/hosting">Galaxy</a>
+Project docs are generated with <a href="https://www.npmjs.com/package/meteor-jsdoc">meteor-jsdoc</a> and are hosted along side EQUIP with <a href="https://www.meteor.com/hosting">Galaxy</a>
 
-Edit the documentation on href="https://github.com/simmeringc/meteor-dataObs-docs">Github</a>
+Edit this documentation on <a href="https://github.com/simmeringc/meteor-dataObs-docs">Github</a>
 
 ### Other Project Resources
 
@@ -406,6 +406,13 @@ The database can be queried in this meteor shell like any other Mongo database.
 
 * Bug free subject arrangement grid. Possible refactoring
 
+* Deploying:
+  * https and SSL keys - google analytics
+  * MIT licensing and copyright
+  * deployment best practices <a href="https://guide.meteor.com/deployment.html">(Galaxy Docs)</a>
+
+  * Figure out why CSS is enlarged in production vs localhost
+
 ###Medium Priority
 
 * Proper input box validation on all pages:
@@ -439,8 +446,6 @@ The database can be queried in this meteor shell like any other Mongo database.
 
 * Better toasts on user action completion
 
-* Figure out why CSS is enlarged in production vs localhost
-
 * Facebook / Google API for user signup
 
 * Linting and code style revisions, duplicate removal and global functions
@@ -456,10 +461,6 @@ The database can be queried in this meteor shell like any other Mongo database.
 * Dynamic sequencing log in observatory. Most recent sequence is shown after a user takes it
 
 * Robust user creation pages instead of dropdown <a href="https://github.com/Differential/accounts-entry">(Example)</a>
-
-* Security and error checking:
-  * https and SSL keys
-  * MIT licensing and copyright
 
 ###Looking Forward
 
