@@ -40,7 +40,7 @@ The production version of EQUIP uses:
 
 * <a href="https://www.meteor.com/hosting">Galaxy</a> for Meteor App and hosting
 * <a href="https://mlab.com/">Mlabs</a> for MongoDB hosting
-* <a href="https://www.namecheap.com/">Namecheap</a> for DNS services
+* <a href="https://www.namecheap.com/">Namecheap</a> for DNS
 * <a href="https://mailgun.com">Mailgun</a> for mailing services
 
 ### Documentation
