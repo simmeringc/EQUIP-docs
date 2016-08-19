@@ -15,7 +15,7 @@ EQUIP is live at
 [![IMAGE ALT TEXT](/EQUIPTourVideoSH.png)](http://www.youtube.com/watch?v=6RVLFzmDr1g "EQUIP App Version 1.3 Tour")
 
 ### Technology
-* <a href="https://docs.meteor.com/">MeteorJS</a> - Full-stack web framework
+* <a href="https://docs.meteor.com/">MeteorJS Version 1.3 (with JavaScript ES5/6 Conventions)</a> - Full-stack web framework
 * <a href="https://guide.meteor.com/collections.html">MongoDB</a> - Database
 * <a href="https://www.meteor.com/hosting">Galaxy</a> - Meteor App hosting
 
@@ -35,6 +35,8 @@ The Meteor CLI will install dependancies and serve the website locally on port 3
 ### Deployment
 
 Fork EQUIP on <a href="https://github.com/simmeringc/meteor-dataObs">Github</a> and<a href="mailto:equipappdevelopers@gmail.com"> contact</a> the EQUIP development team for pull-request and deployment instructions.
+
+Obtain the <a href="https://www.dropbox.com/s/5z8i0j1aa9gdly2/EQUIP%20Deployment%20Guide.docx?dl=0"> EQUIP Deployment Guide</a> from the <a href="mailto:equipappdevelopers@gmail.com">development team</a> if you're deploying EQUIP to production.
 
 The production version of EQUIP uses:
 
@@ -76,7 +78,7 @@ The EQUIP database can be viewed, queried, and modified with the MongoDB GUI: <a
 * Run meteor in the EQUIP project directory
 * Connect to your local MongoDB server at localhost:3001
 
-If your mongo server isn't running on port 3001, connect to the mongo server in the Meteor shell to see which port its running on.
+If your mongo server isn't running on port 3001, connect to the mongo server in the Meteor Mongo Shell to see which port its running on.
 
 ### Meteor Mongo Shell
 
@@ -382,15 +384,81 @@ The database can be queried in this meteor shell like any other Mongo database.
 
 ## Developing EQUIP
 
+Completing the following tutorials will greatly aid in a developers understanding of EQUIP:
+
+  * <a href="https://www.meteor.com/tutorials/blaze/creating-an-app">Creating your first app with MeteorJS</a>
+
+  * <a href="https://www.discovermeteor.com/">Discover Meteor</a>
+
+Find the MeteorJS documentation <a href="https://docs.meteor.com/">here</a>.
+
+Note that later versions of meteor tutorials and documentation may not have the same conventions and best practices as EQUIP because the meteor framework is in constant development. EQUIP runs Meteor Version 1.3 with ES5/6 conventions.
+
 ### File Structure
+
+The root of the project directory contains:
+
+  * .git - For Git files
+  * .meteor - For meteor build and package files, also contains the local database which is excluded in the .gitignore
+  * client - Source files for HTML, Javascript, and CSS
+  * lib - The lib directory is compiled first on startup, contains database initializations and routes
+  * node_modules - Contains node_modules
+  * public - Contains images, videos and other hostable files
+  * server - Contains files that are only run on the server. Includes fixtures and publications
+  * .gitignore - Contains Git excluded files
+  * package.json - Contains information on NPM and node modules
+  * README.md - Github readme file
+  * settings.json - local only file (not on github) used for deployment to Galaxy
+
+The client file contains the bulk of the front-end source files. Files are sorted into subdirectories based on where they appear on the website and relationships between the files. Package helpers and stylesheets also have their own directories.
+
+All files in a MeteorJS application are concatenated together, however, the order in which they are combined and where they are run is dependent on the meteor file structure naming scheme.
+
 
 ### Style Guide
 
-### Meteor Conventions
+EQUIP uses Bootstrap3
+
+EQUIP styles and code quality is in need of slight refactoring before style guide can be established.
+
+It's standard in EQUIP to put the purpose of the file in a comment at the top of a file.
+
+### Meteor Packages
+
+MeteorJS uses native a package manager called Atmosphere, where packages like bootstrap and and font awesome can be easily integrated into a meteor application.
+
+With meteor 1.3 (Current version used in EQUIP) NPM packages can also be integrated into meteor.
+
+View the node_modules file or the /.meteor/packages file to view the packages used in EQUIP.
 
 ### Modifying Front-end code
 
+Much of the front-end code in a meteor application is standard manipulation of JavaScript and HTML. Meteor makes use of file interpolation with templating and template helpers.
+
+Every HTML file has an associated JavaScript file and they point to each other with templating as is visible in the EQUIP source code.
+
+HTML templates are then served by the router or inserted into templates that are already being served with the help of tempale helpers and <a href="http://meteorcapture.com/spacebars/">Spacebars notation</a>
+
+Visit the following resources to gain and understand of the front-end of a meteor application:
+
+* <a href="https://docs.meteor.com/api/templates.html">Meteor Template Documentation</a>
+* <a href="https://www.meteor.com/tutorials/blaze/creating-an-app">Creating your first app with MeteorJS</a> tutorial
+* EQUIP source code
+
 ### Modifying Back-end code
+
+EQUIP uses the iron-router package to facilitate routing: <a href="http://iron-meteor.github.io/iron-router/">Iron Router Guide</a>
+
+EQUIP back-end files include the router, publications, collections.
+
+  * <a href="https://docs.meteor.com/api/pubsub.html">Meteor Publish and Subscribe Guide</a>
+  * <a href="https://guide.meteor.com/collections.html">Meteor Collections Guide</a>
+
+Meteor uses a publish and subscribe paradigm to control access to the database and data control flow.
+
+Meteor's out of the box database service is MongoDB, so collections and collection manipulation is integrated with standard MongoDB methods
+
+* <a href="https://docs.mongodb.com/manual/reference/method/js-collection/">MongoDB Collection Documentation</a>
 
 ****
 
@@ -406,12 +474,17 @@ The database can be queried in this meteor shell like any other Mongo database.
 
 * Bug free subject arrangement grid. Possible refactoring
 
-* Deploying:
+* Deploying: Add SSL encryption with Galaxy and update all links
   * https and SSL keys - google analytics
   * MIT licensing and copyright
+  * Get the Mlabs host out of sandbox mode for production
   * deployment best practices <a href="https://guide.meteor.com/deployment.html">(Galaxy Docs)</a>
 
 * Figure out why CSS is enlarged in production vs localhost
+
+* One page explanation (Modal for more info on landing page)
+
+* Modal freezing when it isn't properly closed and the user navigates with it open
 
 ###Medium Priority
 
@@ -433,6 +506,8 @@ The database can be queried in this meteor shell like any other Mongo database.
 * Sign-out boots user to homepage
 
 ###Low Priority
+
+* More extensible / editable documentation and todo lists
 
 * Bootstrap confirmation popups on view-table deletes
 
