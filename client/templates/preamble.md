@@ -411,7 +411,7 @@ The database can be queried in this meteor shell like any other Mongo database.
   * MIT licensing and copyright
   * deployment best practices <a href="https://guide.meteor.com/deployment.html">(Galaxy Docs)</a>
 
-  * Figure out why CSS is enlarged in production vs localhost
+* Figure out why CSS is enlarged in production vs localhost
 
 ###Medium Priority
 
