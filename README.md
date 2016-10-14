@@ -15,8 +15,6 @@ Run in the project directiory:
 meteor
 ```
 
-{{#template name="preamble"}}
-
 ## EQUIP Project Docs
  *****
 
