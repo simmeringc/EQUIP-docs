@@ -562,5 +562,3 @@ Meteor's out of the box database service is MongoDB, so collections and collecti
 
 * Check user experience tracking and analytics <a href="https://fullstory.com/">(Full Story)</a>
 
-{{/template}}
-
