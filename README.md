@@ -25,7 +25,7 @@ EQUIP is live at
 
 ### Version 1.3 Site Tour
 
-[![IMAGE ALT TEXT](/EQUIPTourVideoSH.png)](http://www.youtube.com/watch?v=6RVLFzmDr1g "EQUIP App Version 1.3 Tour")
+[![Link to video tour]()](http://www.youtube.com/watch?v=6RVLFzmDr1g "EQUIP App Version 1.3 Tour")
 
 ### Technology
 * <a href="https://docs.meteor.com/">MeteorJS Version 1.3 (with JavaScript ES5/6 Conventions)</a> - Full-stack web framework
